@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.security.core.userdetails.UserDetails;
+//import web.dto.UserDTO;
 import web.model.User;
 import web.service.UserService;
 
@@ -28,4 +29,5 @@ public class UserRestController {
         User user = userService.getUserByEmail(userDetails.getUsername());
         return ResponseEntity.ok(user);
     }
+
 }
